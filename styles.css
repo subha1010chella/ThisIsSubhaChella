@@ -665,8 +665,9 @@ body {
   } */
   @media (max-width: 767px) {
     .img-box {
-        width: 100px;
-        height: 100px;
+        /* width: 100px;
+        height: 100px; */
+        visibility: hidden;
     }
 }
 
