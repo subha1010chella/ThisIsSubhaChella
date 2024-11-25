@@ -626,12 +626,7 @@ body {
       margin-top: 50px;
   }
 
-  @media (max-width: 767px) {
-      .img-box {
-          width: 100px;
-          height: 100px;
-      }
-  }
+ 
 
 
   footer {
@@ -668,6 +663,12 @@ body {
       width: 90%;
       max-width: 400px;
   } */
+  @media (max-width: 767px) {
+    .img-box {
+        width: 100px;
+        height: 100px;
+    }
+}
 
 @media (max-width: 480px) {
     .btn {
