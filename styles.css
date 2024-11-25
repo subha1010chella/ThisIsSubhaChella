@@ -546,3 +546,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
+#modalDescription {
+  color: #000 !important;
+}
