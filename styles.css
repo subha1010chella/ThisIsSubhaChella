@@ -35,15 +35,22 @@ h1, h2, h3, h4, h5, h6, .intro-message h1, .section-heading, .connect {
   margin-top: 8px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  .navbar {
+    height: 2%;
+  }
+
   .navbar-nav {
-      display: flex;
+      /* display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: center; */
+      height: 0px;
+      visibility: hidden;
   }
-  .navbar-nav li {
+
+  /* .navbar-nav li {
       margin: 5px 0;
-  }
+  } */
 }
 
 .navbar .navbar-brand {
@@ -87,7 +94,7 @@ h1, h2, h3, h4, h5, h6, .intro-message h1, .section-heading, .connect {
 .navbar-fixed-top {
   position: fixed; /* Ensure navbar stays fixed at the top */
   top: 0;
-  width: 100%;
+  width: 100%; 
   z-index: 1030; /* High z-index to keep it above other content */
 }
 
@@ -154,7 +161,7 @@ color: #000;
 }
 
 .bg-overlay {
-  background:rgba(0,0,0, 0.3);
+  /* background:rgba(0,0,0, 0.3); */
   height: 855px;
 }
 
@@ -242,8 +249,8 @@ hr.intro-divider {
     height: 855px;
 }
 .bg-overlay2 {
-  margin-top: -50px;
-  background: rgba(255, 255, 255, 0.05);
+  /* margin-top: -50px; */
+  /* background: rgba(255, 255, 255, 0.05); */
   height: 855px;
 }
   /*self-taught*/
@@ -277,7 +284,7 @@ h2.section-heading {
 
   /*text*/
  .content-section-a p {
-    font-size: 22px;
+    font-size: 120%;
    /* font-weight: bold; */
     color: #ffd !important;
   }
@@ -297,8 +304,8 @@ h2.section-heading {
   border: 1px outset rgba(255, 255, 255, 0.3);
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   border-radius: 50%; /* Ensures a perfect circle */
-  width: 250px; /* Specify a consistent width */
-  height: 250px; /* Match height to width for the perfect circle */
+  width: 100% !important; /* Specify a consistent width */
+  height: 100% !important; /* Match height to width for the perfect circle */
   object-fit: cover; /* Ensures the image scales correctly */
 }
 
@@ -312,6 +319,7 @@ section {
 
  #below-section {
   color: #ffd;
+  font-size: 1.5em;
 }
 
 #small-text {
@@ -483,8 +491,9 @@ h2.connect {
   background-color: #000;
    color: white;
    margin: 0;
-   height: 60px;
+   height: 2em;
    padding: 10px;
+   font-size: 1.5em;
 }
 
 footer {
@@ -556,7 +565,7 @@ p.copyright {
   position: absolute;
   margin: 0;
   font-size: 3rem;
-  font-family: 'Rowdies', cursive;
+  font-family: 'Rowdies', serif;
   color: rgba(13, 54, 59, 0.8); 
   filter: blur(8px);
   transition: filter 1s ease, color 1s ease, top 3s ease, left 3s ease;
@@ -663,11 +672,11 @@ body {
       width: 90%;
       max-width: 400px;
   } */
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .img-box {
-        /* width: 100px;
-        height: 100px; */
-        visibility: hidden;
+        width: 100%;
+        height: 100%;
+        /* visibility: hidden; */
     }
 }
 
@@ -676,4 +685,30 @@ body {
         padding: 8px 15px;
         font-size: 14px;
     }
+}
+
+.about-text {
+  max-width: 50%;
+}
+
+.img-place {
+  max-width: 50% !important;
+}
+
+@media (max-width: 768px) {
+  .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+  .about-text, .img-place {
+      max-width: 48%; /* Adjust width to allow space between elements */
+      flex: 1;
+  }
+  .about-text {
+      order: 1; /* Optional: Ensure text always appears before the image */
+  }
+  .img-place {
+      order: 2; /* Optional: Ensure image appears after text */
+  }
 }
